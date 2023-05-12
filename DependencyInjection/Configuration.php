@@ -32,9 +32,12 @@ class Configuration implements ConfigurationInterface
 
     public function getConfigTreeBuilder()
     {
-        $builder = new TreeBuilder($this->alias, 'array');
+        $treeBuilder = new TreeBuilder('jms_payment_core');
+        $rootNode = method_exists(TreeBuilder::class, 'getRootNode')
+            ? $treeBuilder->getRootNode()
+            : $treeBuilder->root('jms_payment_core');
 
-        $builder->getRootNode()
+        $rootNode
             ->children()
                 ->arrayNode('encryption')
                     ->canBeEnabled()
@@ -73,7 +76,7 @@ class Configuration implements ConfigurationInterface
             ->end()
         ;
 
-        return $builder;
+        return $treeBuilder;
     }
 
     private function getSecretDeprecationMessage()
