@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Form\ChoosePaymentMethodTypeTest;
+namespace JMS\Payment\CoreBundle\Tests\Form;
 
 use JMS\Payment\CoreBundle\Form\ChoosePaymentMethodType;
 use JMS\Payment\CoreBundle\Tests\Functional\TestPlugin\Form\TestPluginType;
