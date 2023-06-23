@@ -1,6 +1,6 @@
 <?php
 
-namespace JMS\Payment\CoreBundle\Tests\Command;
+namespace JMS\Payment\CoreBundle\Tests\Functional\Command;
 
 use JMS\Payment\CoreBundle\Command\GenerateKeyCommand;
 use JMS\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
